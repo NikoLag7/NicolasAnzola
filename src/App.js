@@ -29,16 +29,16 @@ function App() {
       <div className='bg-stone-300 bg w-full h-44 fondo' ></div>
       <div className='content mx-16 flex  flex-col gap-8'>
         <div className='header-mobile flex flex-row justify-between items-end '> <img className='h-28 rounded-full border-4' src={FotoPerfil}/>
-        <Button className='h-8 w-25 capitalize' style={{marginBottom:10, borderRadius:15,fontSize:14,textTransform:'capitalize'}} variant="contained" endIcon={<FaLinkedin />}>
+        <a target='_Blank' href='https://www.linkedin.com/in/nicolas-anzola-061b4b22b/'><Button className='h-8 w-25 capitalize' style={{marginBottom:10, borderRadius:15,fontSize:14,textTransform:'capitalize'}} variant="contained" endIcon={<FaLinkedin />}>
         Linkedin
-        </Button> 
+        </Button> </a>
         </div>
           <div className='Information-content flex flex-col gap-2 text-slate-300'>
             <div className='text-lg flex items-center gap-2'><h1 className='font-bold text-slate-100'>Nicolas Anzola</h1> <RiVerifiedBadgeFill /></div>
             <span className='text-xs'>!keep calm and codify your ideas! ✨</span>
             <p className='text-sm'>Ingeniero de sistemas. Desarrollador Junior Front-end. Desarrollador low code. Desarrollador Wordpress. Aprendiz Analista de datos. Experto en habilidades blandas</p>
             <div className='flex flex-row gap-3 text-slate-500'><div className='flex text-xs items-center'><CgWorkAlt />Disponible</div>
-            <div className='flex text-xs items-center text-slate-500 border-b'><FaGithub /><a href='https://developer.mozilla.org/es/docs/Web/HTML/Element/link'>Github</a></div>
+            <div className='flex text-xs items-center text-slate-500 border-b'><FaGithub /><a target='_Blank' href='https://github.com/NikoLag7/NicolasAnzola'>Github</a></div>
             <div className='flex text-xs items-center text-slate-500'><FaBirthdayCake />Noviembre 14th</div>
             
             

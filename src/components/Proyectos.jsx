@@ -26,7 +26,7 @@ export class Proyectos extends Component {
           <span>Página de peliculas</span>
           <p className='text-xs'>Este proyecto es una web de películas sencilla que recopila, filtra y muestra en tiempo real un resumen de una API pública de películas. Además, se usaron librerías interesantes como React-router-dom</p>
           <div className='flex flex-row gap-2'>
-            <div className='flex w-auto text-xs items-center text-slate-500  gap-1 hover:text-slate-300'><IoBulb /><a target="_blank" href='#'>Demo</a></div>
+            <div className='flex w-auto text-xs items-center text-slate-500  gap-1 hover:text-slate-300'><IoBulb /><a target="_blank" href='https://consumo-api-peliculas.vercel.app'>Demo</a></div>
             <div className='flex w-auto text-xs items-center text-slate-500  gap-1 hover:text-slate-300'><FaGithub /><a target="_blank" href='https://github.com/NikoLag7/ConsumoAPI-Peliculas'>Link Github</a></div>
           </div>
           <img className='  w-full  border-1' src={Peliculas}/>
@@ -36,7 +36,7 @@ export class Proyectos extends Component {
           <span>Modulo para diferir y pagar una deuda</span>
           <p className='text-xs'>Este es un proyecto que realicé para una prueba técnica. Es un módulo de pago de deudas que permite diferir en varias cuotas y realizar el pago de cada una. Este tipo de mini proyectos son interesantes porque reflejan tareas comunes en el día a día laboral.</p>
           <div className='flex flex-row gap-2'>
-            <div  className='flex w-auto text-xs items-center text-slate-500  gap-1 hover:text-slate-300'><IoBulb /><a target="_blank" href='#'>Demo</a></div>
+            <div  className='flex w-auto text-xs items-center text-slate-500  gap-1 hover:text-slate-300'><IoBulb /><a target="_blank" href='https://componente-pagos.vercel.app'>Demo</a></div>
             <div className='flex w-auto text-xs items-center text-slate-500  gap-1 hover:text-slate-300'><FaGithub /><a target="_blank" href='https://github.com/NikoLag7/Componente-pagos'>Link Github</a></div>
           </div>
           <img className='  w-full  border-1' src={Pagos}/>
