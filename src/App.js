@@ -11,15 +11,22 @@ import Sobremi from './components/Sobremi';
 import Recomendaciones from './components/Recomendaciones';
 import Contacto from './components/Contacto';
 import { useState } from 'react';
-import Fondo from './assets/fondo.jpeg'
 import { CgMail } from "react-icons/cg";
 
 
 
 function App() {
   
-  const [seleccion,Setseleccion] = useState(<Sobremi/>)
+  const [seleccion,Setseleccion] = useState('Sobre mi')
   
+  const nav =[
+    { name: 'Sobre mi', ruta: <Sobremi/> },
+    { name: 'Proyectos', ruta: <Proyectos/> },
+    { name: 'Recomendaciones', ruta: <Recomendaciones/> },
+    { name: 'Contacto', ruta: <Contacto/> },
+]
+  
+ const componenteSelected = nav.find((item) => item.name ===seleccion)?.ruta;
   
   return (
     <div className="App hola ">
@@ -36,7 +43,7 @@ function App() {
           <div className='Information-content flex flex-col gap-2 text-slate-300'>
             <div className='text-lg flex items-center gap-2'><h1 className='font-bold text-slate-100'>Nicolas Anzola</h1> <RiVerifiedBadgeFill /></div>
             <span className='text-xs'>!keep calm and codify your ideas! ✨</span>
-            <p className='text-sm'>Ingeniero de sistemas. Desarrollador Junior Front-end. Desarrollador low code. Desarrollador Wordpress. Aprendiz Analista de datos. Experto en habilidades blandas</p>
+            <p className='text-sm'>Ingeniero de sistemas. Desarrollador Front-end. Desarrollador senior Bubble developer. Desarrollador Wordpress. Aprendiz Analista de datos. Experto en habilidades blandas</p>
             <div className='flex flex-row gap-3 text-slate-500'><div className='flex text-xs items-center'><CgWorkAlt />Disponible</div>
             <div className='flex text-xs items-center text-slate-500 border-b'><FaGithub /><a target='_Blank' href='https://github.com/NikoLag7/NicolasAnzola'>Github</a></div>
             <div className='flex text-xs items-center text-slate-500'><FaBirthdayCake />Noviembre 14th</div>
@@ -45,13 +52,10 @@ function App() {
             </div>
           </div>
           <ul className='max-w-full overflow-auto grid grid-flow-col items-center text-fluid--1 mt-4 gap-1 text-slate-500'>
-              <li><a><span className='flex justify-center' onClick={() => Setseleccion(<Sobremi/>)}>Sobre mi</span></a></li>
-              <li><a><span className='flex justify-center' onClick={() => Setseleccion(<Proyectos/>)}>Proyectos</span></a></li>
-              <li><a><span className='flex justify-center' onClick={() => Setseleccion(<Recomendaciones/>)}>Recomendaciones</span></a></li>
-              <li><a><span className='flex justify-center' onClick={() => Setseleccion(<Contacto/>)}>Contacto</span></a></li> 
+              {nav.map((nav,index)=>(<li key={nav.index} className={componenteSelected===nav.ruta ? "bg-[#101930] border-b border-b-solid border-b-[#fff] text-slate-100 cursor-pointer" : ""}><a><span className='flex justify-center text-xs sm:text-base' onClick={() => Setseleccion(nav.name)}>{nav.name}</span></a></li>))}
           </ul>
           <div>
-            {seleccion}
+            {componenteSelected}
           </div>
           <div className='flex flex-col text-slate-300 items-center justify-center m-5'>
             <div className='flex flex-row gap-2'>
